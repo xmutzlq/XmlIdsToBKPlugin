@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="KingPlugin.contribution1"
+            nameFilter="*.xml">
+         <menu
+               label="BK AutoId"
+               path="additions"
+               id="KingPlugin.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Generate Activity"
+               class="kingplugin.popup.actions.GenerateXML"
+               menubarPath="KingPlugin.menu1/group1"
+               enablesFor="1"
+               id="KingPlugin.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
